@@ -1,3 +1,5 @@
+console.log('npm install qrcode-terminal')
+console.log('npm install')
 const qrcode = require('qrcode-terminal');
 
 const { Client, LocalAuth } = require('whatsapp-web.js');
@@ -15,7 +17,7 @@ client.on('qr', qr => {
 });
 
 
-let mensagem = `Olá Matheus! Sou o bot que irá te apresentar a você as alternativas para ter uma melhor experiência, tudo bem?
+let mensagem = `Olá! Sou o bot que irá te apresentar a você as alternativas para ter uma melhor experiência, tudo bem?
 Como posso te ajudar hoje?
 1 - Como funciona a entrega dos gases?
 2 - Qual gás escolher?
