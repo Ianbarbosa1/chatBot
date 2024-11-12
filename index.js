@@ -1,5 +1,3 @@
-console.log('npm install qrcode-terminal')
-console.log('npm start')
 const qrcode = require('qrcode-terminal');
 
 const { Client, LocalAuth } = require('whatsapp-web.js');
@@ -15,7 +13,6 @@ client.on('ready', () => {
 client.on('qr', qr => {
     qrcode.generate(qr, {small: true});
 });
-
 
 let mensagem = `Olá! Sou o bot que irá te apresentar a você as alternativas para ter uma melhor experiência, tudo bem?
 Como posso te ajudar hoje?
@@ -36,7 +33,6 @@ Acesse o nosso site mmrgases.com.br e veja qual o gas irá suprir a sua necessid
 let msg4 = `*Opção escolhida: Falar com atendente!*
 Foi muito bom falar com você, tenha um ótimo dia!`
 
-
 client.on('message_create', message => {
 	if (message.body.toLocaleLowerCase() === 'mmr gases') {
 	    message.reply(`${mensagem}`)
@@ -56,3 +52,7 @@ client.on('message_create', message => {
 });
 
 client.initialize();
+
+let app = express()
+
+app.listen(process.env.PORT || 3000)
