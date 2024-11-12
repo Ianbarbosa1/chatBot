@@ -1,5 +1,5 @@
 console.log('npm install qrcode-terminal')
-console.log('npm install')
+console.log('npm start')
 const qrcode = require('qrcode-terminal');
 
 const { Client, LocalAuth } = require('whatsapp-web.js');
